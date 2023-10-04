@@ -42,7 +42,7 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="Search"
-              className="input input-bordered border-1 border-white text-white bg-[#ffffff36] hidden md:block md:w-auto"
+              className="input input-bordered border-1 border-white text-white bg-[#0f03035d] hidden md:block md:w-auto"
             />
           </div>
         </div>
@@ -51,7 +51,7 @@ const Navbar = () => {
             {navlink}
           </ul>
         <div className="">
-          <Link to={'/login'} className="btn btn-sm">Log In</Link>
+          <Link to={'/login'} className="btn bg-yellow-500 btn-sm">Log In</Link>
         </div>
         </div>
       </div>
