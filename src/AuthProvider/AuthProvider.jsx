@@ -2,6 +2,11 @@ import { createContext } from "react";
 import PropTypes from 'prop-types';
 export const AuthContext = createContext()
 const AuthProvider = ({children}) => {
+
+
+
+
+    
     const authInfo = {
 
     }
