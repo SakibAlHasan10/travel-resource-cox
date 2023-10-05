@@ -1,6 +1,15 @@
 import { FaFacebook, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import useApi from "../ContextApi/useApi";
 const Social = () => {
+    const {signUpWithGoogle} = useApi()
+    const handleSignUpWithSocial=()=>{
+        signUpWithGoogle()
+        .then(result =>{
+            console.log(result.user)
+        })
+        .catch(error=>console.error(error))
+    }
   return (
     <div className="  pt-4 max-w-sm mx-auto ">
       <div className=" flex items-center gap-2 px-6 max-w-sm mx-auto ">
@@ -16,7 +25,7 @@ const Social = () => {
         </span>
       </Link>
       <Link>
-        <span className="flex items-center rounded-3xl gap-20 border-2 p-2 mt-2 text-base font-medium ">
+        <span onClick={handleSignUpWithSocial} className="flex items-center rounded-3xl gap-20 border-2 p-2 mt-2 text-base font-medium ">
           <FaGoogle className="text-3xl text-orange-500"></FaGoogle>
           <span className="ml-2">Continue with Google</span>
         </span>
