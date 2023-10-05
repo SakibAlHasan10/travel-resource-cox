@@ -1,16 +1,30 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Social from "../../Shere/Social";
 import { useState } from "react";
+import useApi from "../../ContextApi/useApi";
 
 const LogIn = () => {
+  const {signInWithEmail} = useApi()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [check, setCheck] = useState(false)
   const [error, setError] = useState('')
-  const handleLogin=()=>{
-
+  const handleLogin=(e)=>{
+    e.preventDefault()
+    console.log('hello')
+    signInWithEmail(email, password)
+    .then((res)=>{
+      console.log('hello banf',res.user)
+    })
+    .catch(error=> console.error(error))
+    // console.log(error)
+    setEmail('')
+  setPassword('')
   }
-  console.log(email, password, check)
+  const vv = useLocation()
+  console.log(vv)
+
+  // console.log(email, password, check)
   return (
     <div>
       <div className=" w-full max-w-xl mx-auto min-h-screen mb-16 ">
@@ -19,7 +33,7 @@ const LogIn = () => {
             <div className="text-center">
               <h1 className="text-3xl font-bold mt-6">Login now!</h1>
             </div>
-            <form className="card-body max-w-lg  ">
+            <form  className="card-body max-w-lg  ">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
@@ -27,8 +41,8 @@ const LogIn = () => {
                 <input
                   onChange={e=>{setEmail(e.target.value)}}
                   type="email"
-                  placeholder="email"
-                  className="input input-bordered"
+                  // placeholder="email"
+                  className="border-t-2 focus:input"
                   required
                 />
               </div>
@@ -39,8 +53,8 @@ const LogIn = () => {
                 <input
                   onChange={e=>{setPassword(e.target.value)}}
                   type="password"
-                  placeholder="password"
-                  className="input input-bordered"
+                  // placeholder="password"
+                  className="border-t-2 focus:input"
                   required
                 />
                 <div className="flex justify-between">
@@ -56,10 +70,11 @@ const LogIn = () => {
                       Forgot password?
                     </a>
                   </label>
+                  <p>{error}</p>
                 </div>
               </div>
               <div className="form-control mt-6">
-                <button onClick={handleLogin} className="btn btn-primary">Login</button>
+                <button onClick={handleLogin} type="submit" className="btn btn-primary">Login</button>
               </div>
               <p className="text-center text-base font-medium">
                 Do not have an account?{" "}

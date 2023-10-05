@@ -1,13 +1,13 @@
 import useApi from "../../ContextApi/useApi";
 
 const SlideShow = () => {
-  const {booking, handleBooking} = useApi()
-  console.log(booking)
+  const { handleBooking} = useApi()
+  // console.log(booking)
   return (
     <div>
       <div className="flex gap-6 max-w-screen-xl mx-auto px-8">
         <div className="text-white flex-1 ">
-          <h2 className="uppercase text-7xl font-extrabold mb-4">
+          <h2 className="uppercase text-3xl md:text-7xl font-extrabold mb-4">
             Cox`s bazar
           </h2>
           <p>

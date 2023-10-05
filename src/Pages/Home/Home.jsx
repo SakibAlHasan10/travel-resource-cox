@@ -8,7 +8,7 @@ const Home = () => {
   const {booking} = useApi()
   return (
     <div className="relative">
-      <div className="carousel w-full h-[100vh] ">
+      <div className="carousel w-full h-full md:h-[100vh] ">
         <div id="slide1" className="carousel-item relative w-full">
           <img src="/images/Rectangle 1.png" className="w-full" />
           
@@ -26,7 +26,7 @@ const Home = () => {
           
         </div>
         <div className="absolute bg-[#0000007e] w-full h-full z-0">
-        <div className=" flex absolute gap-6 top-32">
+        <div className=" md:flex absolute gap-6 top-10 md:top-32">
           <div className="flex-1 mt-16">
         <SlideShow></SlideShow>
           </div>

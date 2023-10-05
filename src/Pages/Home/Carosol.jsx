@@ -24,13 +24,13 @@ const Carosol = () => {
             className="w-56 hover:border-4 rounded-2xl border-yellow-500"
           />
         </div>
-        <div className="carousel-item ml-6 ">
+        {/* <div className="carousel-item ml-6 ">
           <img
             src="/images/Sajek.png hover:border-4 rounded-2xl border-yellow-500"
             alt="Drink"
             className="w-56 "
           />
-        </div>
+        </div> */}
         
       </div>
     </div>
