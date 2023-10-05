@@ -1,32 +1,40 @@
-
 const Carosol = () => {
-    return (
-        <div>
-            <div className="carousel carousel-end rounded-box">
-  <div className="carousel-item">
-    <img src="/images/stock/photo-1559703248-dcaaec9fab78.jpg" alt="Drink" />
-  </div> 
-  <div className="carousel-item">
-    <img src="/images/stock/photo-1565098772267-60af42b81ef2.jpg" alt="Drink" />
-  </div> 
-  <div className="carousel-item">
-    <img src="/images/stock/photo-1572635148818-ef6fd45eb394.jpg" alt="Drink" />
-  </div> 
-  <div className="carousel-item">
-    <img src="/images/stock/photo-1494253109108-2e30c049369b.jpg" alt="Drink" />
-  </div> 
-  <div className="carousel-item">
-    <img src="/images/stock/photo-1550258987-190a2d41a8ba.jpg" alt="Drink" />
-  </div> 
-  <div className="carousel-item">
-    <img src="/images/stock/photo-1559181567-c3190ca9959b.jpg" alt="Drink" />
-  </div> 
-  <div className="carousel-item">
-    <img src="/images/stock/photo-1601004890684-d8cbf643f5f2.jpg" alt="Drink" />
-  </div>
-</div>
+  return (
+    <div>
+      <div className="carousel carousel-end rounded-box">
+        <div className="carousel-item ml-6  rounded-2xl">
+          <img
+            src="/images/Rectangle 1.png"
+            alt="Drink"
+            className="w-56 rounded-2xl hover:border-4 border-yellow-500 "
+          />
+          <h2 className="absolute text-3xl font-bold uppercase bottom-4 mx-3 text-white">Cox`s bazar</h2>
         </div>
-    );
+        <div className="carousel-item ml-6">
+          <img
+            src="/images/Sreemongol.png"
+            alt="Drink"
+            className="w-56 hover:border-4 border-yellow-500 rounded-2xl"
+          />
+        </div>
+        <div className="carousel-item ml-6 ">
+          <img
+            src="/images/sundorbon.png"
+            alt="Drink"
+            className="w-56 hover:border-4 rounded-2xl border-yellow-500"
+          />
+        </div>
+        <div className="carousel-item ml-6 ">
+          <img
+            src="/images/Sajek.png hover:border-4 rounded-2xl border-yellow-500"
+            alt="Drink"
+            className="w-56 "
+          />
+        </div>
+        
+      </div>
+    </div>
+  );
 };
 
 export default Carosol;

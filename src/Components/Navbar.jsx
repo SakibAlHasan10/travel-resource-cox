@@ -36,7 +36,7 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to={'/'}>
-          <img src="../../public/logo.png" className="w-36 text-white bg-[#ffffff45] p-2 h-14 mr-14" alt="logo" />
+          <img src="/logo.png" className="w-36 text-white bg-[#ffffff45] p-2 h-14 mr-14" alt="logo" />
           </Link>
           <div className="form-control">
             <input

@@ -1,18 +1,16 @@
+import { Link } from "react-router-dom";
+
 const LogIn = () => {
   return (
     <div>
-      <div className="hero min-h-screen pt-24 bg-slate-500">
-        <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">Login now!</h1>
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
+      <div className=" w-full bg-black max-w-xl mx-auto min-h-screen  ">
+        <div className="pt-28">
+          <div className="  w-full max-w-lg mx-auto rounded-md border-2  bg-base-100">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold mt-6">Login now!</h1>
+            
           </div>
-          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form className="card-body">
+            <form className="card-body max-w-lg  ">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
@@ -34,15 +32,22 @@ const LogIn = () => {
                   className="input input-bordered"
                   required
                 />
+                <div className="flex justify-between">
+                  <div className="flex items-center gap-2 text-base font-medium">
+                    <input type="checkbox" name="" id="" />
+                    Remember Me
+                  </div>
                 <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
+                  <a href="#" className="label-text-alt text-yellow-400 text-base font-medium link link-hover">
                     Forgot password?
                   </a>
                 </label>
+                </div>
               </div>
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Login</button>
               </div>
+              <p className="text-center text-base font-medium">Do not have an account? <Link className="text-yellow-400 hover:text-blue-950 underline"> Create an account</Link> </p>
             </form>
           </div>
         </div>
