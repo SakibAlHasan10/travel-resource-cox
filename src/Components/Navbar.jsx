@@ -1,6 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
+import useApi from "../ContextApi/useApi";
 
 const Navbar = () => {
+  const {user} = useApi()
     const navlink = <>
     <NavLink to={'/news'}>News</NavLink>
     <NavLink to={'/destination'}>Destination</NavLink>
@@ -10,7 +12,7 @@ const Navbar = () => {
   return (
     <div className="max-w-screen-xl mx-auto px-8 py-3">
       <div className="navbar ">
-        <div className="navbar-start w-full md:w-2/3">
+        <div className="navbar-start w-full md:w-2/5">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
@@ -46,12 +48,16 @@ const Navbar = () => {
             />
           </div>
         </div>
-        <div className="navbar-end hidden lg:flex">
-          <ul className="menu text-white text-base font-medium menu-horizontal px-1 gap-10 mr-10">
+        <div className="navbar-end hidden w-3/5 lg:flex">
+          <ul className={`menu
+          ${user? 'text-black': 'text-white' }  text-base font-medium menu-horizontal px-1 gap-10 mr-10`}>
             {navlink}
           </ul>
         <div className="">
+          {
+            user ? <Link to={'/'}><span className="text-base font-bold">{user.email}</span></Link> :
           <Link to={'/login'} className="btn bg-yellow-500 btn-sm">Log In</Link>
+          }
         </div>
         </div>
       </div>

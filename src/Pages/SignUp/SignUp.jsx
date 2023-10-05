@@ -1,15 +1,24 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Social from "../../Shere/Social";
+import useApi from "../../ContextApi/useApi";
 // import useApi from "../../ContextApi/useApi";
 
 const SignUp = () => {
+  const { signUpWithEmail } = useApi();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [check, setCheck] = useState(false);
   const [error, setError] = useState("");
-  const handleLogin = () => {};
-  console.log(email, password, check);
+  const handleLogin = () => {
+    signUpWithEmail(email, password)
+      .then((res) => {
+        console.log(res.user);
+      })
+      .catch((error) => console.error(error));
+  };
+
+  //   console.log(email, password, check);
   return (
     <div>
       <div className=" w-full max-w-xl mx-auto min-h-screen mb-16 ">
